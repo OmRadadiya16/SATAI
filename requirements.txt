@@ -1,0 +1,17 @@
+langgraph
+streamlit
+langchain
+langchain-core
+langchain-openai
+langchain-huggingface
+streamlit
+langchain
+langchain-core
+langchain-openai
+langchain-huggingface
+langgraph
+python-dotenv
+huggingface-hub
+dotenv
+langgraph-checkpoint-sqlite
+typing
