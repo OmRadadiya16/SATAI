@@ -5,13 +5,12 @@ from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from pydantic import BaseModel, Field
 from langgraph.graph import  START , END , StateGraph
-
-
+from pydantic_core.core_schema import model_field
 
 load_dotenv()
 
 
-model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash" , temperature=2)
 
 
 class Sat_State(TypedDict):
@@ -20,7 +19,8 @@ class Sat_State(TypedDict):
     Difficulty : str
     Instructions : Optional[str]
     Questions : Optional[str]
-    
+    History : Optional[List[str]]
+
 class Output_format(BaseModel):
     question: str = Field(description="only contains The SAT question text without Options and answer.")
     option_a: str = Field(description="Option A text")
@@ -41,13 +41,16 @@ def genrater_que(state: Sat_State) -> Sat_State:
         You will create only 1 question based on the given information.
         Each question should have 4 options and only one correct answer.
         You will also provide the correct answer for each question.
+        every time question should be different.
+        Do not repeat same question multiple times.
         Subject: {Subject}
         Topic: {Topic}
         Difficulty: {Difficulty}
         Additional Instructions: {Instructions}
+        previous Generated Questions: {History}
         Return your answer strictly as JSON in this formate:
         {format_instructions}""",
-         input_variables=["Subject", "Topic", "Difficulty", "Instructions"],
+         input_variables=["Subject", "Topic", "Difficulty", "Instructions","History"],
         partial_variables={"format_instructions": parser.get_format_instructions()}
     )
 
@@ -58,7 +61,9 @@ def genrater_que(state: Sat_State) -> Sat_State:
         "Subject" : state["Subject"],
         "Topic" : state["Topic"],
         "Difficulty" : state["Difficulty"],
-        "Instructions" : state["Instructions"] if state["Instructions"] else "No additional instructions"
+        "Instructions" : state["Instructions"] if state["Instructions"] else "No additional instructions",
+        "History" : state["History"] if state["History"] else "No Previous question"
+
     })
 
 

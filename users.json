@@ -1,8 +1,93 @@
 {
-    "test@gmail.com": {
-        "name": "omlooooo",
-        "password": "12345678",
-        "score": 0,
-        "history": []
+    "om@gmail.com": {
+        "name": "om",
+        "password": "121797@o",
+        "score": {
+            "Math": {
+                "Algebra": [
+                    8,
+                    10
+                ],
+                "Advanced Math": [
+                    4,
+                    10
+                ],
+                "Problem-solving and Data Analysis": [
+                    9,
+                    10
+                ],
+                "Geometry and Trigonometry": [
+                    5,
+                    10
+                ]
+            },
+            "Reading and Writing": {
+                "Craft and Structure": [
+                    2,
+                    10
+                ],
+                "Information and Ideas": [
+                    6,
+                    10
+                ],
+                "Standard English Conventions": [
+                    7,
+                    10
+                ],
+                "Expression of Ideas": [
+                    9,
+                    10
+                ]
+            }
+        },
+        "history": {
+            "Math": {
+                "Algebra": [
+                    "3x = 15, what is the value of x.",
+                    "If the system of equations $y = x^2 - 6x + 13$ and $y = x + k$ has exactly one real solution, what is the value of $k$?",
+                    "If $x$ and $y$ are real numbers such that $x+y=7$ and $x^2+y^2=31$, what is the value of $x^3+y^3$?"
+                ],
+                "Advanced Math": [],
+                "Problem-solving and Data Analysis": [],
+                "Geometry and Trigonometry": [
+                    "A person stands 20 feet away from the base of a flagpole. The angle of elevation from the person's eyes to the top of the flagpole is 45 degrees. If the person's eyes are 5 feet above the ground, what is the total height of the flagpole?"
+                ]
+            },
+            "Reading and Writing": {
+                "Craft and Structure": [],
+                "Information and Ideas": [],
+                "Standard English Conventions": [],
+                "Expression of Ideas": []
+            }
+        },
+        "bookmark": [
+            {
+                "question": "In a circle with center O, points A and B are on the circle. The measure of angle AOB is 120 degrees. If the radius of the circle is 6 units, what is the length of the chord AB?",
+                "option_a": "3\u221a3 units",
+                "option_b": "6 units",
+                "option_c": "6\u221a2 units",
+                "option_d": "6\u221a3 units",
+                "correct_answer": "D",
+                "explanation": "Draw radii OA and OB, forming isosceles triangle AOB with OA = OB = 6 units. The angle AOB is given as 120 degrees. To find the length of chord AB, draw a perpendicular from O to AB, let's call the intersection point M. This perpendicular bisects both the angle AOB and the chord AB.\n\nSo, in the right triangle OMA:\nAngle AOM = (1/2) * Angle AOB = (1/2) * 120\u00b0 = 60\u00b0.\nOA (the hypotenuse) = 6 units.\n\nWe can use trigonometry to find AM:\nsin(\u2220AOM) = AM / OA\nsin(60\u00b0) = AM / 6\n\nWe know that sin(60\u00b0) = \u221a3 / 2.\nSo, \u221a3 / 2 = AM / 6\nMultiply both sides by 6: AM = 6 * (\u221a3 / 2) = 3\u221a3 units.\n\nSince M bisects AB, the length of the chord AB is 2 * AM.\nAB = 2 * (3\u221a3) = 6\u221a3 units."
+            },
+            {
+                "question": "A person stands 20 feet away from the base of a flagpole. The angle of elevation from the person's eyes to the top of the flagpole is 45 degrees. If the person's eyes are 5 feet above the ground, what is the total height of the flagpole?",
+                "option_a": "20 feet",
+                "option_b": "25 feet",
+                "option_c": "30 feet",
+                "option_d": "5 + 20\u221a2 feet",
+                "correct_answer": "B",
+                "explanation": "Let 'h' be the height of the flagpole above the person's eye level. The horizontal distance from the person to the flagpole is 20 feet. The angle of elevation is 45 degrees. We can form a right triangle where 'h' is the opposite side and 20 feet is the adjacent side to the 45-degree angle. \n\nUsing the tangent function: tan(angle) = opposite / adjacent\ntan(45\u00b0) = h / 20\n\nSince tan(45\u00b0) = 1, we have:\n1 = h / 20\nh = 20 feet\n\nThis 'h' is the height from the person's eye level to the top of the flagpole. The person's eyes are 5 feet above the ground. Therefore, the total height of the flagpole is the height above eye level plus the eye level height:\nTotal height = h + 5 = 20 + 5 = 25 feet."
+            },
+            {
+                "question": "If $x$ and $y$ are real numbers such that $x+y=7$ and $x^2+y^2=31$, what is the value of $x^3+y^3$?",
+                "option_a": "112",
+                "option_b": "124",
+                "option_c": "154",
+                "option_d": "168",
+                "correct_answer": "C",
+                "explanation": "We are given two equations:\n1) $x+y=7$\n2) $x^2+y^2=31$\n\nWe need to find the value of $x^3+y^3$. We can use the algebraic identity for the sum of cubes: $x^3+y^3 = (x+y)(x^2-xy+y^2)$.\n\nTo use this identity, we first need to find the value of $xy$. We know that the square of the sum $(x+y)$ is related to $x^2+y^2$ and $xy$ by the identity:\n$(x+y)^2 = x^2+2xy+y^2$\n\nSubstitute the given values into this identity:\n$7^2 = (31) + 2xy$\n$49 = 31 + 2xy$\n\nTo find $2xy$, subtract 31 from both sides:\n$49 - 31 = 2xy$\n$18 = 2xy$\n\nNow, divide by 2 to find $xy$:\n$xy = 9$\n\nFinally, substitute the values of $(x+y)$, $(x^2+y^2)$, and $(xy)$ into the sum of cubes identity:\n$x^3+y^3 = (x+y)((x^2+y^2)-xy)$\n$x^3+y^3 = (7)((31)-(9))$\n$x^3+y^3 = (7)(22)$\n$x^3+y^3 = 154"
+            }
+        ]
     }
 }
