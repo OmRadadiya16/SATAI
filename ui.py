@@ -214,6 +214,7 @@ def sat_app():
                 st.info(f"Explanation: {question['explanation']}")
 
             save_user(user_data)
+    st.info("Generating a question may take a few seconds...")
     # placeholder = st.empty()
     # from datetime import datetime
     # import time
