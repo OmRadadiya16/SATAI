@@ -48,6 +48,7 @@ def genrater_que(state: Sat_State) -> Sat_State:
         Difficulty: {Difficulty}
         Additional Instructions: {Instructions}
         previous Generated Questions: {History}
+        Return output with Streamlit latext support if subject is maths
         Return your answer strictly as JSON in this formate:
         {format_instructions}""",
          input_variables=["Subject", "Topic", "Difficulty", "Instructions","History"],

@@ -1,4 +1,6 @@
 import json
+import random
+
 import streamlit as st
 from streamlit import session_state
 
@@ -135,7 +137,7 @@ def sat_app():
         st.session_state.current_topic = topic
 
         history = user_data[st.session_state["user"]]["history"][st.session_state.current_subject][st.session_state.current_topic]
-        print(history)
+
         if "current_question" not in st.session_state:
             st.session_state.current_question = None
             st.session_state.selected_answer = None
@@ -170,7 +172,7 @@ def sat_app():
         if st.session_state.current_question:
             question = session_state.current_question
             st.subheader("📕 Question")
-            st.write(question['question'])
+            st.markdown(question['question'])
             options = {
                     "A" : question['option_a'],
                     "B" : question['option_b'],
@@ -232,6 +234,102 @@ def sat_app():
         st.warning("this feature is not implemented yet.")
 
 
+
+
+        if "current_random_question" not in st.session_state:
+            st.session_state.current_random_question = None
+            st.session_state.selected_random_answer = None
+            st.session_state.random_submitted = False
+            st.session_state.current_random_subject = None
+            st.session_state.current_random_topic = None
+
+        if st.button("Generate random question!"):
+            subject = random.choice(["Math", "Reading and Writing"])
+            if subject == "Reading and Writing":
+                topic = random.choice(["Craft and Structure", "Information and Ideas", "Standard English Conventions",
+                                       "Expression of Ideas"])
+
+            else:
+                topic = random.choice(
+                    ["Algebra", "Advanced Math", "Problem-solving and Data Analysis", "Geometry and Trigonometry"])
+
+            difficulty = random.choice(["Easy", "Medium", "Hard"])
+
+            st.session_state.current_random_subject = subject
+            st.session_state.current_random_topic = topic
+            st.session_state.current_random_difficulty = difficulty
+            st.write(st.session_state.current_random_subject)
+            st.text(st.session_state.current_random_topic)
+            st.text(st.session_state.current_random_difficulty)
+
+            history = user_data[st.session_state["user"]]["history"][st.session_state.current_random_subject][
+                st.session_state.current_random_topic]
+            st.session_state.score_update = False
+            from bot2 import Sat_State
+            state = Sat_State(
+                Subject=subject,
+                Topic=topic,
+                Difficulty=difficulty,
+                Instructions=instructions,
+                Questions=None,
+                History=history
+            )
+
+            result = bot.invoke(state)
+            st.session_state.current_random_question = result["Questions"]
+            user_data[st.session_state["user"]]["history"][st.session_state.current_random_subject][
+                st.session_state.current_random_topic].append(st.session_state.current_random_question["question"])
+            st.session_state.selected_random_answer = None
+            st.session_state.random_submitted = False
+
+        if st.session_state.current_random_question:
+            question = session_state.current_random_question
+            st.subheader("📕 Question")
+            st.markdown(question['question'])
+            options = {
+                "A": question['option_a'],
+                "B": question['option_b'],
+                "C": question['option_c'],
+                "D": question['option_d']
+            }
+
+            st.session_state.selected_random_answer = st.radio("Your Answer:", list(options.keys()),
+                                                        format_func=lambda x: f"{x}. {options[x]}", key="answer_radio_random")
+
+            if st.button("Check Answer!"):
+                st.session_state.random_submitted = True
+
+            if st.button("Bookmark 🔖!"):
+                bookmarked_question = st.session_state.current_random_question
+                if bookmarked_question not in user_data[st.session_state["user"]]["bookmark"]:
+                    user_data[st.session_state["user"]]["bookmark"].append(bookmarked_question)
+                    save_user(user_data)
+                    st.success("📘 Question added to bookmarks!")
+                else:
+                    st.info("✅ Already bookmarked.")
+
+            if st.session_state.random_submitted:
+                if st.session_state.selected_random_answer == question['correct_answer']:
+                    if not st.session_state.score_update:
+                        st.session_state.score_update = True
+                        user_data[st.session_state["user"]]["score"][st.session_state.current_random_subject][
+                            st.session_state.current_random_topic][0] += 1
+                        user_data[st.session_state["user"]]["score"][st.session_state.current_random_subject][
+                            st.session_state.current_random_topic][1] += 1
+
+                    st.success("Correct!")
+
+
+                else:
+                    if not st.session_state.score_update:
+                        st.session_state.score_update = True
+                        user_data[st.session_state["user"]]["score"][st.session_state.current_random_subject][
+                            st.session_state.current_random_topic][1] += 1
+
+                    st.error(f"❌ Wrong! Correct answer: {question['correct_answer']}")
+                st.info(f"Explanation: {question['explanation']}")
+
+            save_user(user_data)
 
 
     with bookmark:

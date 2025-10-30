@@ -5,12 +5,12 @@
         "score": {
             "Math": {
                 "Algebra": [
-                    8,
-                    10
+                    9,
+                    12
                 ],
                 "Advanced Math": [
-                    4,
-                    10
+                    7,
+                    15
                 ],
                 "Problem-solving and Data Analysis": [
                     9,
@@ -18,7 +18,7 @@
                 ],
                 "Geometry and Trigonometry": [
                     5,
-                    10
+                    11
                 ]
             },
             "Reading and Writing": {
@@ -45,19 +45,35 @@
                 "Algebra": [
                     "3x = 15, what is the value of x.",
                     "If the system of equations $y = x^2 - 6x + 13$ and $y = x + k$ has exactly one real solution, what is the value of $k$?",
-                    "If $x$ and $y$ are real numbers such that $x+y=7$ and $x^2+y^2=31$, what is the value of $x^3+y^3$?"
+                    "If $x$ and $y$ are real numbers such that $x+y=7$ and $x^2+y^2=31$, what is the value of $x^3+y^3$?",
+                    "If $3x - 7 = 8$, what is the value of $x$?",
+                    "If $2(x + 3) = 14$, what is the value of $x$?",
+                    "If $2x + 3y = 12$ and $x - y = 1$, what is the value of $5x + y$?"
                 ],
-                "Advanced Math": [],
+                "Advanced Math": [
+                    "What is the sum of the solutions to the equation `3x^2 - 12x + 9 = 0`?",
+                    "The graphs of the equations `y = x^2 - 5x + 7` and `y = 2x - 3` intersect at two points in the `xy`-plane. What is the product of the x-coordinates of these two intersection points?",
+                    "For the polynomial $P(x) = x^3 - 5x^2 + kx - 6$, if $(x-3)$ is a factor of $P(x)$, what is the value of $k$?",
+                    "If the quadratic equation $2x^2 + kx + 8 = 0$ has exactly one distinct real solution, and $k > 0$, what is the value of $k$?"
+                ],
                 "Problem-solving and Data Analysis": [],
                 "Geometry and Trigonometry": [
-                    "A person stands 20 feet away from the base of a flagpole. The angle of elevation from the person's eyes to the top of the flagpole is 45 degrees. If the person's eyes are 5 feet above the ground, what is the total height of the flagpole?"
+                    "A person stands 20 feet away from the base of a flagpole. The angle of elevation from the person's eyes to the top of the flagpole is 45 degrees. If the person's eyes are 5 feet above the ground, what is the total height of the flagpole?",
+                    "A rectangular park has a diagonal path that measures 100 meters. If the path forms an angle of 30 degrees with the longer side of the park, what is the perimeter of the park, in meters?"
                 ]
             },
             "Reading and Writing": {
                 "Craft and Structure": [],
-                "Information and Ideas": [],
-                "Standard English Conventions": [],
-                "Expression of Ideas": []
+                "Information and Ideas": [
+                    "The Amazon rainforest is a vast ecosystem known for its incredible biodiversity. It covers an area of approximately 5.5 million square kilometers, primarily across nine South American countries. Scientists estimate that it houses about 10% of the world's known species.",
+                    "Bioluminescence, the emission of light by living organisms, is a widespread phenomenon, particularly in the deep ocean where sunlight cannot penetrate. Marine organisms, from bacteria to fish, use this self-generated light for various purposes. These include attracting mates, luring prey, deterring predators, and even camouflage. The chemical reactions that produce light typically involve a light-emitting molecule, luciferin, and an enzyme, luciferase. The specific luciferin-luciferase system varies greatly among different species, leading to a diverse array of colors and light patterns.\n\nBased on the passage, what is the primary role of bioluminescence for marine organisms?"
+                ],
+                "Standard English Conventions": [
+                    "While initially dismissed as merely speculative, the extensive research, conducted by a multinational team over two decades and meticulously documenting seismic patterns and subterranean shifts, **have suggested** that a previously unknown geological fault line underlies the continent's most populated region."
+                ],
+                "Expression of Ideas": [
+                    "The following is a draft of an essay analyzing advancements in exoplanet research:\n\n\"The discovery of exoplanets \u2014 planets outside our solar system \u2014 has fundamentally altered our understanding of planetary formation and potential habitability. Early detection methods, such as the transit method, relied on observing slight dips in a star's brightness as a planet passed in front of it. While groundbreaking, these techniques initially favored the detection of large, hot planets orbiting close to their stars, often called 'hot Jupiters.' However, more refined photometric surveys and sophisticated data analysis tools have enabled astronomers to identify smaller, more temperate worlds. This development is crucial. It supports the growing hypothesis that rocky planets capable of harboring liquid water are abundant throughout the galaxy.\"\n\nThe student wants to combine the last two sentences of the paragraph (''This development is crucial. It supports the growing hypothesis that rocky planets capable of harboring liquid water are abundant throughout the galaxy.'') in a way that emphasizes how the identification of smaller, more temperate exoplanets provides direct, essential support for the hypothesis regarding the abundance of habitable worlds. Which of the following best achieves this goal?"
+                ]
             }
         },
         "bookmark": [
@@ -87,6 +103,60 @@
                 "option_d": "168",
                 "correct_answer": "C",
                 "explanation": "We are given two equations:\n1) $x+y=7$\n2) $x^2+y^2=31$\n\nWe need to find the value of $x^3+y^3$. We can use the algebraic identity for the sum of cubes: $x^3+y^3 = (x+y)(x^2-xy+y^2)$.\n\nTo use this identity, we first need to find the value of $xy$. We know that the square of the sum $(x+y)$ is related to $x^2+y^2$ and $xy$ by the identity:\n$(x+y)^2 = x^2+2xy+y^2$\n\nSubstitute the given values into this identity:\n$7^2 = (31) + 2xy$\n$49 = 31 + 2xy$\n\nTo find $2xy$, subtract 31 from both sides:\n$49 - 31 = 2xy$\n$18 = 2xy$\n\nNow, divide by 2 to find $xy$:\n$xy = 9$\n\nFinally, substitute the values of $(x+y)$, $(x^2+y^2)$, and $(xy)$ into the sum of cubes identity:\n$x^3+y^3 = (x+y)((x^2+y^2)-xy)$\n$x^3+y^3 = (7)((31)-(9))$\n$x^3+y^3 = (7)(22)$\n$x^3+y^3 = 154"
+            },
+            {
+                "question": "The Amazon rainforest is a vast ecosystem known for its incredible biodiversity. It covers an area of approximately 5.5 million square kilometers, primarily across nine South American countries. Scientists estimate that it houses about 10% of the world's known species.",
+                "option_a": "The Amazon rainforest is mainly found in North America.",
+                "option_b": "Approximately 10% of the world's known species reside in the Amazon rainforest.",
+                "option_c": "The Amazon rainforest is the smallest ecosystem on Earth.",
+                "option_d": "Its area covers about 55 million square kilometers.",
+                "correct_answer": "B",
+                "explanation": "The passage explicitly states, 'Scientists estimate that it houses about 10% of the world's known species.' Option A is incorrect because the passage says it's 'primarily across nine South American countries.' Option C is incorrect as the passage implies it's a 'vast ecosystem,' not the smallest. Option D is incorrect as the passage states its area is 'approximately 5.5 million square kilometers,' not 55 million."
+            },
+            {
+                "question": "The following is a draft of an essay analyzing advancements in exoplanet research:\n\n\"The discovery of exoplanets \u2014 planets outside our solar system \u2014 has fundamentally altered our understanding of planetary formation and potential habitability. Early detection methods, such as the transit method, relied on observing slight dips in a star's brightness as a planet passed in front of it. While groundbreaking, these techniques initially favored the detection of large, hot planets orbiting close to their stars, often called 'hot Jupiters.' However, more refined photometric surveys and sophisticated data analysis tools have enabled astronomers to identify smaller, more temperate worlds. This development is crucial. It supports the growing hypothesis that rocky planets capable of harboring liquid water are abundant throughout the galaxy.\"\n\nThe student wants to combine the last two sentences of the paragraph (''This development is crucial. It supports the growing hypothesis that rocky planets capable of harboring liquid water are abundant throughout the galaxy.'') in a way that emphasizes how the identification of smaller, more temperate exoplanets provides direct, essential support for the hypothesis regarding the abundance of habitable worlds. Which of the following best achieves this goal?",
+                "option_a": "This crucial development, which identified smaller, more temperate worlds, supports the growing hypothesis that rocky planets capable of harboring liquid water are abundant throughout the galaxy.",
+                "option_b": "Crucially, as a result of astronomers identifying smaller, more temperate worlds, the growing hypothesis that rocky planets capable of harboring liquid water are abundant throughout the galaxy is supported.",
+                "option_c": "Supporting the growing hypothesis that rocky planets capable of harboring liquid water are abundant throughout the galaxy, the identification of smaller, more temperate worlds has proven crucial.",
+                "option_d": "Crucial to this growing hypothesis is the identification of smaller, more temperate worlds, which provides direct evidence that rocky planets capable of harboring liquid water are abundant throughout the galaxy.",
+                "correct_answer": "D",
+                "explanation": "Option D most effectively combines the two sentences while achieving the rhetorical goal of emphasizing direct, essential support. By starting with 'Crucial to this growing hypothesis is the identification of smaller, more temperate worlds,' the sentence immediately establishes the significance of this finding in relation to the main argument. The use of 'which provides direct evidence' precisely and emphatically conveys the strong, essential connection between the finding and the hypothesis, directly addressing the student's stated goal.\n\nOption A is too indirect; 'This crucial development, which identified...' less directly connects the 'crucial' aspect to the hypothesis at the outset and uses the weaker 'supports.'\nOption B is wordy and awkward ('as a result of astronomers identifying') and uses a passive voice ('is supported') which lessens the impact and directness. It also shifts the emphasis to the action of the astronomers rather than the finding itself.\nOption C rephrases the relationship but places 'has proven crucial' at the end, which slightly diminishes the immediate emphasis on the finding's crucial role in *proving* the hypothesis compared to option D's structure and stronger phrasing ('direct evidence')."
+            },
+            {
+                "question": "A rectangular park has a diagonal path that measures 100 meters. If the path forms an angle of 30 degrees with the longer side of the park, what is the perimeter of the park, in meters?",
+                "option_a": "100 + 50\\sqrt{3}",
+                "option_b": "100 + 100\\sqrt{3}",
+                "option_c": "200 + 50\\sqrt{3}",
+                "option_d": "200 + 100\\sqrt{3}",
+                "correct_answer": "B",
+                "explanation": "1. The diagonal, along with the length and width of the rectangle, forms a right-angled triangle. \n2. Let the diagonal be `d = 100` meters. Let the angle the diagonal forms with the longer side (length, `L`) be `\\theta = 30` degrees. The angle with the shorter side (width, `W`) will be `60` degrees.\n3. We can use trigonometric ratios to find the length and width:\n   *   `L = d \\cdot \\cos(\\theta) = 100 \\cdot \\cos(30^\\circ) = 100 \\cdot (\\sqrt{3}/2) = 50\\sqrt{3}` meters.\n   *   `W = d \\cdot \\sin(\\theta) = 100 \\cdot \\sin(30^\\circ) = 100 \\cdot (1/2) = 50` meters.\n4. The perimeter of a rectangle is given by the formula `P = 2(L + W)`.\n5. Substitute the values of `L` and `W` into the perimeter formula:\n   *   `P = 2(50\\sqrt{3} + 50) = 100\\sqrt{3} + 100` meters."
+            },
+            {
+                "question": "If $2(x + 3) = 14$, what is the value of $x$?",
+                "option_a": "2",
+                "option_b": "4",
+                "option_c": "6",
+                "option_d": "8",
+                "correct_answer": "B",
+                "explanation": "To solve the equation $2(x + 3) = 14$ for $x$, first distribute the 2 into the parentheses: $2x + 6 = 14$. Next, subtract 6 from both sides of the equation: $2x = 14 - 6$, which simplifies to $2x = 8$. Finally, divide both sides by 2 to find the value of $x$: $x = 8/2$, so $x = 4$."
+            },
+            {
+                "question": "The graphs of the equations `y = x^2 - 5x + 7` and `y = 2x - 3` intersect at two points in the `xy`-plane. What is the product of the x-coordinates of these two intersection points?",
+                "option_a": "-10",
+                "option_b": "-7",
+                "option_c": "7",
+                "option_d": "10",
+                "correct_answer": "D",
+                "explanation": "To find the x-coordinates of the intersection points, set the expressions for y equal to each other:\n`x^2 - 5x + 7 = 2x - 3`\nSubtract `2x` from both sides and add `3` to both sides to form a quadratic equation equal to zero:\n`x^2 - 5x - 2x + 7 + 3 = 0`\n`x^2 - 7x + 10 = 0`\nThis is a quadratic equation in the form `ax^2 + bx + c = 0`. For such an equation, the product of the roots (or x-coordinates of the intersection points) can be found using the formula `c/a`. \nIn this equation, `a=1`, `b=-7`, and `c=10`. \nSo, the product of the x-coordinates is `c/a = 10/1 = 10`.\nAlternatively, you can factor the quadratic equation:\n`(x - 2)(x - 5) = 0`\nThe solutions are `x = 2` and `x = 5`. The product of these x-coordinates is `2 * 5 = 10`."
+            },
+            {
+                "question": "If $2x + 3y = 12$ and $x - y = 1$, what is the value of $5x + y$?",
+                "option_a": "13",
+                "option_b": "15",
+                "option_c": "17",
+                "option_d": "19",
+                "correct_answer": "C",
+                "explanation": "We are given a system of two linear equations:\n1) $2x + 3y = 12$\n2) $x - y = 1$\n\nFirst, we need to solve for the values of $x$ and $y$. We can use either substitution or elimination. Let's use elimination.\nMultiply the second equation by 3 to make the coefficients of $y$ opposites:\n$3(x - y) = 3(1) \\implies 3x - 3y = 3$\n\nNow, add this new equation to the first equation:\n$(2x + 3y) + (3x - 3y) = 12 + 3$\n$5x = 15$\nDivide by 5:\n$x = 3$\n\nSubstitute the value of $x=3$ back into the second original equation ($x - y = 1$):\n$3 - y = 1$\nSubtract 3 from both sides:\n$-y = 1 - 3$\n$-y = -2$\nMultiply by -1:\n$y = 2$\n\nFinally, we need to find the value of $5x + y$. Substitute $x=3$ and $y=2$ into this expression:\n$5(3) + 2$\n$15 + 2 = 17$\n\nThus, the value of $5x + y$ is 17."
             }
         ]
     }
