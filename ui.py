@@ -337,7 +337,7 @@ def sat_app():
         for question in user_data[st.session_state["user"]]["bookmark"][::-1]:
             i = i + 1
             st.subheader(f"{i} :")
-            st.success(f"Question : {question['question']}")
+            st.markdown(f"Question : {question['question']}")
             st.markdown(f"A ) {question['option_a']}")
             st.markdown(f"B ) {question['option_b']}")
             st.markdown(f"C ) {question['option_c']}")

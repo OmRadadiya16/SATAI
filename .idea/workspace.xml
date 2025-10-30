@@ -7,9 +7,7 @@
     <list default="true" id="bbc9d84c-451c-4723-955e-d679f87d5455" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot2.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +127,7 @@
       <workItem from="1760634659378" duration="1278000" />
       <workItem from="1760758111798" duration="930000" />
       <workItem from="1760759064138" duration="13667000" />
+      <workItem from="1761822853981" duration="943000" />
     </task>
     <servers />
   </component>
