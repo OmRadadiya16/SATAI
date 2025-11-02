@@ -25,7 +25,6 @@ def register():
     name = st.text_input("Enter Your Name")
     email = st.text_input("Enter Your Email")
     password = st.text_input("Enter Your Password" , type="password")
-    password = st.text_input("Enter Your Password")
     if st.button("Register👆"):
         users = load_users()
         if email in users:
@@ -137,6 +136,7 @@ def sat_app():
         st.session_state.current_topic = topic
 
         history = user_data[st.session_state["user"]]["history"][st.session_state.current_subject][st.session_state.current_topic]
+        save_user(user_data)
 
         if "current_question" not in st.session_state:
             st.session_state.current_question = None
@@ -159,8 +159,11 @@ def sat_app():
                 History=history
             )
 
-
-            result = bot.invoke(state)
+            try:
+                result = bot.invoke(state)
+            except Exception as e:
+                st.error(f"⚠️ Error generating question. Please try again! {e}")
+                return
             st.session_state.current_question = result["Questions"]
             user_data[st.session_state["user"]]["history"][st.session_state.current_subject][st.session_state.current_topic].append(st.session_state.current_question["question"])
             st.session_state.selected_answer = None
@@ -172,7 +175,7 @@ def sat_app():
         if st.session_state.current_question:
             question = session_state.current_question
             st.subheader("📕 Question")
-            st.markdown(question['question'])
+            st.markdown(question['question'] , unsafe_allow_html=True)
             options = {
                     "A" : question['option_a'],
                     "B" : question['option_b'],
@@ -217,17 +220,7 @@ def sat_app():
 
             save_user(user_data)
     st.info("Generating a question may take a few seconds...")
-    # placeholder = st.empty()
-    # from datetime import datetime
-    # import time
-    # while True:
-    #     now = datetime.now().strftime("%H:%M:%S")
-    #
-    #     # Display time
-    #     placeholder.markdown(f"## 🕒 {now}")
-    #
-    #     # Wait 1 second
-    #     time.sleep(1)
+
 
     with random_mode:
         st.header("Random Question Generator")
@@ -264,6 +257,8 @@ def sat_app():
 
             history = user_data[st.session_state["user"]]["history"][st.session_state.current_random_subject][
                 st.session_state.current_random_topic]
+            save_user(user_data)
+
             st.session_state.score_update = False
             from bot2 import Sat_State
             state = Sat_State(
